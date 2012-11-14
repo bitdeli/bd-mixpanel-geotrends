@@ -91,7 +91,10 @@ def trending(stats):
 
 def country_stats(profiles):
     text['cover'], stats = daily_stats(profiles)
-    return chain(global_stats(stats), trending(stats))
+    if stats:
+        return chain(global_stats(stats), trending(stats))
+    else:  
+        return []
 
 Profiles().map(country_stats).show()
 
