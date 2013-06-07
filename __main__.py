@@ -8,7 +8,8 @@ from itertools import chain
 TOP_N=5
 TREND_WINDOW=7 #days
 TREND_NOISE_LIMIT=25 #users
-text = {'window': TREND_WINDOW}
+text = {'window': TREND_WINDOW,
+        'trend_change': Percent(0)}
 
 set_theme('builder')
 
